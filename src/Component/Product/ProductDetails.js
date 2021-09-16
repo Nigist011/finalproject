@@ -13,13 +13,13 @@ const [{ cart, detail }, dispatch] = useStateValue();
   };
   return (
     <div>
-      {detail.map((product) => (  // I map detail array
+      {detail.map((product) => (             
         <ProductDetail>
           <img className="details_image" src={product.image} alt={product.title}/>
 
           <ProductDetailInfo>
             <h3>{product.title}</h3>
-            <p className="details_price">     / I render img, price, description..
+            <p className="details_price">     
               <small>$</small>
               <strong>{product.price}</strong>
             </p>
@@ -29,7 +29,7 @@ const [{ cart, detail }, dispatch] = useStateValue();
             <button onClick={() => addToCart(product)}>Add to Cart</button>
           </ProductDetailInfo>
         </ProductDetail>
-      ))}                   // I used on click even to run add to cart function.
+      ))}                   
     </div>
   );
 }
