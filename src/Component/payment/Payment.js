@@ -20,9 +20,6 @@ function Payment() {
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
 
-  // const [clientSecret, setClientSecret] = useState(true);
-
-
 
   const handleChange = (event) => {
     setDisabled(event.empty);
@@ -121,7 +118,6 @@ function Payment() {
           </div>
         </div>
       </PaymentWrapper>
-
     </PaymentContainer>
   );
 }
@@ -162,14 +158,14 @@ const PaymentWrapper = styled.div`
     padding-bottom: 20px;
   }
   button {
-    background: #731649;
+    background: #09817b;
     border-radius: 2px;
     width: 100%;
     height: 30px;
     border: 1px solid;
     font-weight: bolder;
     margin-top: 10px;
-    border-color: #731649;
+    border-color: #09817b;
     color: #fff;
   }
 `;

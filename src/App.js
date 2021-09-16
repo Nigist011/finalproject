@@ -10,8 +10,9 @@ import Payment from "./Component/payment/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
+
 const promise = loadStripe(
-  "pk_test_51ILWaRK6FJ4NvQJQAfitXtvoOesU79Mex29dVJK0y2CXbqoOdmeceakJ0NaCWwvKbUuKTtaSsOj4U2KQeBtfoNZA005UNamqdp"
+  "pk_test_51IPHY7DOWQJlhOeqtfi4d8vEtNt116G7kAmJjhA2SCEWxFJ5O6uyr93az5sYw4fvW75JB2uBUJP2y8d6gT97zN9U008102k7Ra"
 );
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/productdetail">
             <Header />
             <ProductDetails />
+            <Footer />
           </Route>
           <Route path="/cart">
             <Header />
@@ -31,15 +33,16 @@ function App() {
               <Header />
               <Payment />
             </Elements>
+            <Footer />
           </Route>
           <Route path="/">
             <Header />
             <ProductsPage />
+            <Footer />
           </Route>
         </Switch>
-        <Footer />
+        
       </div>
-      {/* <Footer /> */}
     </Router>
     
   );

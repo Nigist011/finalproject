@@ -64,14 +64,14 @@ const ProductDetailInfo = styled.div`
     width: 600px;
   }
   button {
-    background: #731649;
+    background: #09817b;
     width: 200px;
     height: 30px;
     font-weight: 800;
     font-size: 15px;
     border: 1px solid;
     margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
+    border-color: #09817b;
     color: #fff;
     cursor: pointer;
   }

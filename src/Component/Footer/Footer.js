@@ -20,21 +20,15 @@ import styled from "styled-components";
 export default Footer;
 
 const FooterContainer = styled.footer`
-/* .footer-middle {
+.footer-middle {
     background: var(--mainColor);
-    padding-top: 2rem;
-    color: var(--mainWhite);
-    
-} */
-.text-xs-center {
-    background: var(--mainColor);
-    padding-top: 3rem;
+    padding-top: 1rem;
     color: var(--mainWhite);
     text-align: center;
+    padding-bottom: 1rem;
+    
 }
-
-.footer-bottom {
-    padding-top: .05rem;
-    padding-bottom: .05rem;
+.main-footer {
+    position: absolute;
 }
 `;

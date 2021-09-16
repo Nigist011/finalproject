@@ -23,33 +23,31 @@ function ProductsPage() {
   }
     
 
-    return (
-        <div>
-
-            <Link to='/productDetail' className='link' >
-            <div className='product__row' >
-            {products.map((product, id) =>(
-               <div className="product" key={id}>
-               <div className="product__info">
-                 <p>{product.title}</p>
-                 <p className="product__price">
-                   <small>$</small>
-                   <strong>{product.price}</strong>
-                 </p>
-               </div>
-               <img
-                 src={product.image}
-                 alt=""
-                 onClick={() =>addToDetail(product)}
-               />
-             </div>
- 
-            ))}
-</div>
-            </Link>
+  return (
+    <div>
+      <Link to="/productdetail" className="link">
+        <div className="product__row">
+          {products.map((product, id) => (
+            <div className="product" key={id}>
+              <div className="product__info">
+                <p>{product.title}</p>
+                <p className="product__price">
+                  <small>$</small>
+                  <strong>{product.price}</strong>
+                </p>
+              </div>
+              <img
+                src={product.image}
+                alt=""
+                onClick={() => addToDetail(product)}
+              />
+            </div>
+          ))}
         </div>
-    );
-};
+      </Link>
+    </div>
+  );
+}
 
 export default ProductsPage;
 
