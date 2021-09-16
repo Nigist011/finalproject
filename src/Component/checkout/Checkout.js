@@ -10,11 +10,11 @@ function Checkout() {
   console.log("cart", quantity);
   const removeFromCart = (id) => {
     dispatch({
-      type: "REMOVE_FROM_CART",
+      type: "REMOVE_FROM_CART",    // i used removed from cart action type from reducer,
       payload: id,
     });
   };
-const handleQuantity = (quantity) => {
+const handleQuantity = (quantity) => {    // I used handdle quantity function  to handle the quantity.
   dispatch({
     type: "ADD_QUANTITY",
    payload: quantity,
@@ -24,7 +24,7 @@ const handleQuantity = (quantity) => {
     <div className="checkout">
       <div className="checkout__left">
         <div>
-          {cart.map((item) => (
+          {cart.map((item) => (             // I map cart array
             <div className="checkoutProduct">
               <img className="checkoutProduct__image" src={item.image} />
 
@@ -44,16 +44,16 @@ const handleQuantity = (quantity) => {
                     name="qty"
                     // value={}
                     onChange={(e) => {
-                    handleQuantity(e.target.value);
+                    handleQuantity(e.target.value);   //I  pass the handle quantity function here.
                    
-                  }
+                  }                            
                   }
                 
                   ></input>
                   
                 </div>
 
-                <button onClick={() => removeFromCart(item.id)}>
+                <button onClick={() => removeFromCart(item.id)}>  // on click event used it to pass remove from cart item
                   Remove from Cart
                 </button>
               </div>

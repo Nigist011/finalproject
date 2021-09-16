@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <h1 className="store_name">Nigist Store</h1>
+        <h1 className="store_name">Nigist's Fake Store</h1>
       </Link>
       <div className="header__search">
         <input className="header__searchInput" type="text" />

@@ -2,9 +2,10 @@ import React from "react";
 import { useStateValue } from "../stateProvider/StateProvider";
 import styled from "styled-components";
 function ProductDetails() {
-  const [{ cart, detail }, dispatch] = useStateValue();
+const [{ cart, detail }, dispatch] = useStateValue();
+
+
   const addToCart = (product) => {
-    // dispatch the item into the data layer
     dispatch({
       type: "ADD_TO_CART",
       payload: product,
@@ -12,13 +13,13 @@ function ProductDetails() {
   };
   return (
     <div>
-      {detail.map((product) => (
+      {detail.map((product) => (  // I map detail array
         <ProductDetail>
           <img className="details_image" src={product.image} alt={product.title}/>
 
           <ProductDetailInfo>
             <h3>{product.title}</h3>
-            <p className="details_price">
+            <p className="details_price">     / I render img, price, description..
               <small>$</small>
               <strong>{product.price}</strong>
             </p>
@@ -28,7 +29,7 @@ function ProductDetails() {
             <button onClick={() => addToCart(product)}>Add to Cart</button>
           </ProductDetailInfo>
         </ProductDetail>
-      ))}
+      ))}                   // I used on click even to run add to cart function.
     </div>
   );
 }

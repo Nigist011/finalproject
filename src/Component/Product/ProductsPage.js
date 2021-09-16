@@ -10,13 +10,13 @@ function ProductsPage() {
         useEffect(() => {
            
             fetch("https://fakestoreapi.com/products")
-                .then((res) => res.json())
-                .then((json) => setProducts(json));
+                .then((res) => res.json()) // changed to json
+                .then((json) => setProducts(json));  //using set producted I updated product
     
         }, []);
   const addToDetail = (product)=> {
     dispatch({
-      type: 'ADD_TO_DETAIL',
+      type: 'ADD_TO_DETAIL',        // I used add to detail to add product to product detail.
       payload: product
 
     })
@@ -27,7 +27,7 @@ function ProductsPage() {
     <div>
       <Link to="/productdetail" className="link">
         <div className="product__row">
-          {products.map((product, id) => (
+          {products.map((product, id) => (    // I wrape product with link
             <div className="product" key={id}>
               <div className="product__info">
                 <p>{product.title}</p>
@@ -39,7 +39,7 @@ function ProductsPage() {
               <img
                 src={product.image}
                 alt=""
-                onClick={() => addToDetail(product)}
+                onClick={() => addToDetail(product)}  // I used on click event to pass add to detail function
               />
             </div>
           ))}
